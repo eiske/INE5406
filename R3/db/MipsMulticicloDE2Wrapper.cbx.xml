@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="MipsMulticicloDE2Wrapper">
+		<CBX_INST_ENTRY INSTANCE_NAME="|MipsMulticicloDE2Wrapper|MipsMulticiclo:Mips|blocoOperativo:BO|Memoria:RAM|bram:SectorA|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_oee1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
