@@ -37,14 +37,13 @@ architecture Behavioral of ULA is
 	signal result : std_logic_vector(width-1 downto 0);
 begin
 	--completar
-	result <= a + b when op = "010" else -- add
-			 a - b when op = "110" else -- sub
-			 a or b when op = "001" else -- or
-			 a and b when op = "000" else
-			 (others => '1') when a < b else
-			 (others => '0'); -- and
-			 
-	res <= result;
-	zero <= '1' when result = (width => '0') else '0';
+	result <= a and b 		  when op = "000" else
+			  a or b  		  when op = "001" else
+			  (others => '1') when op = "111" and (a < b) else
+			  (others -> '0') when op = "111" else 
+			  a - b 		  when op = "110" else
+			  a + b;
+	zero <= '1' when result = 0 else '0';
+	res  <= result; 
 			 
 end architecture;

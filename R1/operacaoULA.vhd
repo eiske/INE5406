@@ -32,12 +32,12 @@ end entity;
 architecture Behavioral of OperacaoULA is
 begin
 	op <= "010" when ULAOp = "00" else -- add
-			"110" when ULAOp = "01" else -- sub
-			"001" when Funct(3 downto 0) = "0101" else -- or
-			"010" when Funct(3 downto 0) = "0000" else -- add
-			"000" when Funct(3 downto 0) = "0100" else -- and
-			"111" when Funct(3 downto 0) = "1010" else -- slt
-			"110" when Funct(3 downto 0) = "0010";
+		  "110" when ULAOp = "01" else -- sub
+		  "001" when Funct(3 downto 0) = "0101" else -- or
+		  "010" when Funct(3 downto 0) = "0000" else -- add
+		  "000" when Funct(3 downto 0) = "0100" else -- and
+		  "111" when Funct(3 downto 0) = "1010" else -- slt
+		  "110" when Funct(3 downto 0) = "0010";
 			
 		
 end architecture;
